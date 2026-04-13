@@ -13,8 +13,9 @@ buttons.forEach(btn => {
             display.innerHTML=num;
             console.log(num);
             if (num=3947){
-                console.log("congratulations")
-                document.getElementById("result").innerHTML="success";
+                console.log("congratulations");
+                document.getElementById("result").innerHTML="<a href='/Dash/'>Go to homepage</a>";
+
             }
     }else{
         num="";
