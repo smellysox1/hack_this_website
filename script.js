@@ -12,14 +12,13 @@ buttons.forEach(btn => {
             num=num+e.target.id;
             display.innerHTML=num;
             console.log(num);
-            if (num=3947){
+            if (num==3947){
                 console.log("congratulations");
-                document.getElementById("result").innerHTML="<a href='/Dash/'>Go to homepage</a>";
-
+                document.getElementById("result").innerHTML="<a href='/Dash/'>go to dash</a>"
             }
     }else{
         num="";
-        
+        display.innerHTML=num;
     }
     });
 
