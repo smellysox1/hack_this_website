@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank</title>
+</head>
+<body>
+    <h1>Welcome to bank account</h1>
+    <span style="background-color: rgb(82, 189, 224)">
+        <h3>Balance</h3>
+        <p id="balance">£5</p>
+    </span>
+
+    £<input placeholder="Amount" id="transferAmount" />
+    <button onclick="transfer()">Transfer</button>
+
+    <script>
+        const balanceElement = document.getElementById("balance");
+        const transferAmount = document.getElementById("transferAmount");
+
+        var balance = 5;
+
+        function transfer() {
+            const amount = parseInt(transferAmount.value);
+            if (amount != NaN) {
+                balance -= amount;
+                balanceElement.textContent = "£" + balance;
+            }
+        }
+    </script>
+</body>
+</html>
