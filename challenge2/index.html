@@ -11,20 +11,22 @@
 <body class="d-flex justify-content-center align-items-center" style="height:100vh;">
     <div class="d-flex flex-column justify-content-center">
         <span class="text-center pb-3">Enter your password to continue</span>
-        <form name="passwordForm" class="input-group" onsubmit="checkPassword()">
-            <input class="form-control" type="password" name="passwordInput">
-            <input class="btn btn-primary" type="submit" value="Submit">
-        </form>
+        <div class="input-group">
+            <input class="form-control" type="password" id="passwordInput">
+            <button id="submit" class="btn btn-primary" onclick="checkPassword()">Submit</button>
+        </div>
+        <div id="incorrect" class="alert alert-danger p-2 mt-4 d-none">Incorrect password. Please try again.</div>
+        <div id="correct" class="alert alert-success p-2 mt-4 d-none">Correct password. <a href="/hack_this_website/Dash" class="alert-link">Go to your dashboard</a></div>
     </div>
 
     <script>
         function checkPassword() {
-            console.log(document.forms["passwordForm"]["passwordInput"].value);
-            console.log(document.forms["passwordForm"]["passwordInput"].value == "passwordHere");
-            if (document.forms["passwordForm"]["passwordInput"].value == "passwordHere") {
-                window.location.href = "/hack_this_website/Dash";
+            if (document.getElementById("passwordInput").value == "passwordHere") {
+                document.getElementById("incorrect").classList.add("d-none");
+                document.getElementById("correct").classList.remove("d-none");
             } else {
-                document.forms["passwordForm"]["passwordInput"].value = "";
+                document.getElementById("passwordInput").value = "";
+                document.getElementById("incorrect").classList.remove("d-none");
             }
         }
     </script>
