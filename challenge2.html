@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <title>Challenge 2</title>
+</head>
+<body class="d-flex justify-content-center align-items-center" style="height:100vh;">
+    <div class="d-flex flex-column justify-content-center">
+        <span class="text-center pb-3">Enter your password to continue</span>
+        <form name="passwordForm" class="input-group" onsubmit="checkPassword()">
+            <input class="form-control" type="password" name="passwordInput">
+            <input class="btn btn-primary" type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script>
+        function checkPassword() {
+            console.log(document.forms["passwordForm"]["passwordInput"].value);
+            console.log(document.forms["passwordForm"]["passwordInput"].value == "passwordHere");
+            if (document.forms["passwordForm"]["passwordInput"].value == "passwordHere") {
+                window.location.href = "/hack_this_website/Dash";
+            } else {
+                document.forms["passwordForm"]["passwordInput"].value = "";
+            }
+        }
+    </script>
+</body>
+</html>
