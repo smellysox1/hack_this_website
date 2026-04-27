@@ -8,7 +8,7 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-    <title>Challenge 2</title>
+    <title>Challenge 3</title>
 </head>
 <body class="d-flex justify-content-center align-items-center" style="height:100vh;">
     <div class="d-flex flex-column justify-contesnt-center">
@@ -28,35 +28,7 @@
         }
 
         var failedAttempts = 0;
-    // The `initSqlJs` function is globally provided by all of the main dist files if loaded in the browser.
-    // We must specify this locateFile function if we are loading a wasm file from anywhere other than the current html page's folder.
-         function checkUsername(){
-            if (failedAttempts >= 3) {
-                return;
-            }
-
-            initSqlJs(config).then(function(SQL){
-                var db = new SQL.Database();
-                let baseprompt="CREATE TABLE users (username varchar, password varchar); \
-                INSERT INTO users VALUES ('james_s1526', '49jsu8jdSQeaL'); \
-                INSERT INTO users VALUES ('Mr_sir','xae#38jeufb');";
-                db.run(baseprompt);
-                let prompt = "SELECT username FROM users WHERE username='" + document.getElementById("username").value + "' AND password='" + document.getElementById("password").value + "'";
-                console.log(prompt);
-                const person = db.exec(prompt);
-                console.log("person found.: ");
-
-                if (!person[0]){
-                    document.getElementById("username").value = "";
-                    document.getElementById("incorrect").classList.remove("d-none");
-                    failedAttempts++;
-                } else {
-                    console.log(person[0].values);
-                    document.getElementById("incorrect").classList.add("d-none");
-                    document.getElementById("correct").classList.remove("d-none");
-                }
-            });
-        }
+         (function(_0x58aed8,_0x332bf1){const _0x3ab65d=_0x4736,_0x119bd4=_0x58aed8();while(!![]){try{const _0x4a7c71=parseInt(_0x3ab65d(0x164))/0x1+-parseInt(_0x3ab65d(0x167))/0x2+parseInt(_0x3ab65d(0x16f))/0x3*(parseInt(_0x3ab65d(0x16c))/0x4)+-parseInt(_0x3ab65d(0x168))/0x5+-parseInt(_0x3ab65d(0x15d))/0x6+parseInt(_0x3ab65d(0x162))/0x7*(parseInt(_0x3ab65d(0x171))/0x8)+parseInt(_0x3ab65d(0x174))/0x9;if(_0x4a7c71===_0x332bf1)break;else _0x119bd4['push'](_0x119bd4['shift']());}catch(_0x23a07a){_0x119bd4['push'](_0x119bd4['shift']());}}}(_0x3ff4,0x703b3));function _0x3ff4(){const _0x19f2a5=['getElementById','2642300LEJqut','incorrect','\x27\x20AND\x20password=\x27','3TauYRE','CREATE\x20TABLE\x20users\x20(username\x20varchar,\x20password\x20varchar);\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20INSERT\x20INTO\x20users\x20VALUES\x20(\x27james_s1526\x27,\x20\x2749jsu8jdSQeaL\x27);\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20INSERT\x20INTO\x20users\x20VALUES\x20(\x27Mr_sir\x27,\x27xae#38jeufb\x27);','3160XbksCy','remove','d-none','3412782ItCixY','values','classList','2821770vXiRQk','add','person\x20found.:\x20','correct','run','13979KczwOS','username','287460lrWpVb','value','Database','1742796fkfrxP','1573280HWOBtd','then','log'];_0x3ff4=function(){return _0x19f2a5;};return _0x3ff4();}function _0x4736(_0x805cca,_0x3f0148){_0x805cca=_0x805cca-0x15b;const _0x3ff46a=_0x3ff4();let _0x4736cf=_0x3ff46a[_0x805cca];return _0x4736cf;}function checkUsername(){const _0x4f88ec=_0x4736;if(failedAttempts>=0x3)return;initSqlJs(config)[_0x4f88ec(0x169)](function(_0x3cb659){const _0x3be7ab=_0x4f88ec;var _0x4d35c8=new _0x3cb659[(_0x3be7ab(0x166))]();let _0x3b167f=_0x3be7ab(0x170);_0x4d35c8[_0x3be7ab(0x161)](_0x3b167f);let _0x6d9f68='SELECT\x20username\x20FROM\x20users\x20WHERE\x20username=\x27'+document[_0x3be7ab(0x16b)](_0x3be7ab(0x163))['value']+_0x3be7ab(0x16e)+document[_0x3be7ab(0x16b)]('password')[_0x3be7ab(0x165)]+'\x27';console[_0x3be7ab(0x16a)](_0x6d9f68);const _0x1aa957=_0x4d35c8['exec'](_0x6d9f68);console[_0x3be7ab(0x16a)](_0x3be7ab(0x15f)),!_0x1aa957[0x0]?(document['getElementById']('username')[_0x3be7ab(0x165)]='',document['getElementById']('incorrect')[_0x3be7ab(0x15c)][_0x3be7ab(0x172)](_0x3be7ab(0x173)),failedAttempts++):(console[_0x3be7ab(0x16a)](_0x1aa957[0x0][_0x3be7ab(0x15b)]),document[_0x3be7ab(0x16b)](_0x3be7ab(0x16d))[_0x3be7ab(0x15c)][_0x3be7ab(0x15e)](_0x3be7ab(0x173)),document[_0x3be7ab(0x16b)](_0x3be7ab(0x160))[_0x3be7ab(0x15c)][_0x3be7ab(0x172)](_0x3be7ab(0x173)));});}
     </script>
 </body>
 </html>
