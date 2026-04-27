@@ -38,8 +38,8 @@
             initSqlJs(config).then(function(SQL){
                 var db = new SQL.Database();
                 let baseprompt="CREATE TABLE users (username varchar, password varchar); \
-                INSERT INTO users VALUES ('james_s1526', '49jsu8jdSQeaL') \
-                INSERT INTO users VALUES ('Mr_sir','xae#38jeufb')";
+                INSERT INTO users VALUES ('james_s1526', '49jsu8jdSQeaL'); \
+                INSERT INTO users VALUES ('Mr_sir','xae#38jeufb');";
                 db.run(baseprompt);
                 let prompt = "SELECT username FROM users WHERE username='" + document.getElementById("username").value + "' AND password='" + document.getElementById("password").value + "'";
                 console.log(prompt);
